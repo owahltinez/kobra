@@ -15,3 +15,6 @@ build-backend = "uv_build"
 
 [dependency-groups]
 dev = ["pytest>=8"]
+
+[tool.uv]
+exclude-newer = false
