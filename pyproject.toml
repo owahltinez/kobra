@@ -1,0 +1,17 @@
+[project]
+name = "kobra"
+version = "0.1.0"
+description = "Slice for and drive an Anycubic Kobra S1 with an ACE, running Rinkhals"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["click>=8.1"]
+
+[project.scripts]
+kobra = "kobra.cli:cli"
+
+[build-system]
+requires = ["uv_build>=0.13,<0.14"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = ["pytest>=8"]
