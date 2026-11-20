@@ -82,7 +82,11 @@ items and extensions are rejected.
 
 - `machine_start_gcode` ends with `T[initial_tool]` so the ACE loads a spool
 - `retraction_distances_when_cut` is 18; Orca rejects Anycubic's 0
-- `curr_bed_type` is `High Temp Plate`, so the 60 °C bed temperature applies
+- `curr_bed_type` is `High Temp Plate`, so the PLA bed temperature applies
+- PLA adhesion without a brim, since parts near the bed edges lifted: 65 °C bed,
+  220 °C first layer, fan off for 3 layers and ramped to layer 6 with a 50% floor;
+  first layer at 25 mm/s (35 mm/s infill); 5000/3000/6000 mm/s² default, outer wall
+  and travel acceleration; 0.6 mm z-hop
 - `solid_infill_rotate_template` is empty, so solid layers alternate at 45°/135°
   instead of Orca's S1 default of 0°/90°
 - `name` and `compatible_printers` match Orca's built-in Kobra S1 profile
